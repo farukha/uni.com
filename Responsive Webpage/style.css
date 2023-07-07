@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#preloader {
+    height: 100vh;
+    width: 100%;
+    background: black url(preloader-3.gif) no-repeat center center;
+    background-size: cover;
+}
+
+.header {
+    
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url("banner.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 6%;
+    align-items: center;
+    position: relative;
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 8px 12px;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links ul li a::after {
+    content: '';
+    display: block;
+    transition: 0.5s;
+    height: 2px;
+    width: 0%;
+    background-color: rgba(0, 0, 255, 0.774);
+    margin: auto;
+
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+.text-box {
+   
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50,-50);
+    text-align: center;
+    margin-left: -600px;
+
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+}
+
+.hero {
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid darkolivegreen;
+    padding: 13px 32px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    font: 13px  ;
+}
+
+.hero:hover {
+    border: 1px solid darkolivegreen;
+    background-color: darkolivegreen;
+    transition: 1s;
+
+}
+
+@media(max-width: 700px;) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background-color: darkolivegreen;
+        text-align: left;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        z-index: 2;
+    }
+}
